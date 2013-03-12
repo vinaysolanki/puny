@@ -1,0 +1,22 @@
+
+		<div class="site-title">
+			<h1>Puny<sup><span class="beta">beta</span><sup></h1>
+			<p>1-Click URL Shortener</p>
+		</div>
+		
+		<div class="main-content">
+			<div class="input-append">
+				<%= form_tag( :action => "shorten", :method => "get") do %>
+				  <%= text_field_tag(:url,@new_url1, :class => "span6 main-input") %>
+				  <button class="btn" style="box-shadow: 0px 2px 5px;width:74px; border-radius: 0 10px 10px 0; line-height:30px; font-weight: bold;" type="button">Copy	</button>
+			</div>
+			<div class="main-btn">
+				<%= submit_tag("Shorten", :class => "btn btn-warning btn-block btn-large main-button") %>
+				<% end %>
+			</div>
+			<div class="puny-details">
+				<p><strong><span><%= @total_urls %></span></strong> URLs shortened</p>
+				<p><strong><span><%= @total_hits%></span></strong> Total URL visits</p>
+			</div>
+		</div>
+		<p><%= @url_id_n %></p>

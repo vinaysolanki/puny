@@ -1,0 +1,23 @@
+<h1>Welcome to Puny!</h1>
+<h2><%= @url_id %></h2>
+
+<%= form_tag( :action => "shorten", :method => "get") do %>
+  <%= label_tag(:url, "Shorten:") %>
+  <%= text_field_tag(:url) %>
+  <%= submit_tag("Shorten") %>
+<% end %>
+
+<table>
+    <tr>
+      <th>ID</th>
+      <th>URL</th>
+      <th>KEY</th>
+    </tr>
+  <% @urls.each do |u| %>
+    <tr>
+      <td><%= u.id %></td>
+      <td><%= u.url %></td>
+      <td><%= u.key %></td>
+    </tr>
+  <% end %>
+</table>
