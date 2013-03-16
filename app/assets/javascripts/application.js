@@ -16,23 +16,18 @@
 
 $(document).ready(function(){
 
-	/*$('#btn-copy').click(function(){
-		$('#copy-flash').trigger("click");
-		
-	});*/
-	
-	/*$('#copy-flash').zclip({
-		path:'js/ZeroClipboard.swf',
-        copy:$('#url').text()
-	});*/
-	
 	$("#btn-copy").zclip({
 		path:'http://www.steamdev.com/zclip/js/ZeroClipboard.swf',
-        copy: $('#url').text()
+        copy: function(){
+			val = $('#url').val();
+			return val;
+		}
 	});
 	
-	/*$('#btn-copy').click(function(){
-		alert('hi');
-	});*/
+	$('#btn-copy').click(function(){
+		$('.copy-msg').css('visibility', 'visible');
+		$('.copy-msg').css('opacity', 1);
+		$('.copy-msg').animate({'opacity': 0},3000);
+	});
 	
 });

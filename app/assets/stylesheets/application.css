@@ -97,7 +97,24 @@ background-image: -webkit-radial-gradient(center, circle farthest-corner, #F6FFA
 	font-weight: bold
 }
 
-#copy-flash{
-	height:1px;
-	width:1px;
+#btn-copy.hover{
+	background-color: #e6e6e6;
+	color: #333;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+}
+
+.copy-msg{
+	visibility: hidden;
+	font-size:9px;
+	color: green;
+	position: relative;
+	width: 40px;
+	left: 560px;
+	top: -30px;
+	-webkit-animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+	
 }

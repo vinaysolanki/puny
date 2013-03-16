@@ -9,7 +9,9 @@
 				<%= form_tag( :action => "shorten", :method => "get") do %>
 				  <%= text_field_tag(:url,@new_url1, :class => "span6 main-input",:placeholder => 'Enter a URL') %>
 				  <button id="btn-copy" class="btn" type="button">Copy	</button>
+				  <div class="copy-msg">Copied!</div>
 			</div>
+			
 			<div class="main-btn">
 				<%= submit_tag("Shorten", :class => "btn btn-warning btn-block btn-large main-button") %>
 				<% end %>
@@ -20,4 +22,4 @@
 			</div>
 		</div>
 		<p><%= @url_id_n %></p>
-		<div id="copy-flash"></div>
+		
