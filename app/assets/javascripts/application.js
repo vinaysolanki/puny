@@ -26,13 +26,10 @@ $(document).ready(function(){
         copy:$('#url').text()
 	});*/
 	
-		$("#btn-copy").zclip({
-        path:'ZeroClipboard.swf',
-        copy:$('#url').text(),
-        afterCopy:function(){
-            alert('after');
-        }
-		});
+	$("#btn-copy").zclip({
+		path:'http://www.steamdev.com/zclip/js/ZeroClipboard.swf',
+        copy: $('#url').text()
+	});
 	
 	/*$('#btn-copy').click(function(){
 		alert('hi');
