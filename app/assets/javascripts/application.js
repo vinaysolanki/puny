@@ -13,3 +13,29 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+
+	/*$('#btn-copy').click(function(){
+		$('#copy-flash').trigger("click");
+		
+	});*/
+	
+	/*$('#copy-flash').zclip({
+		path:'js/ZeroClipboard.swf',
+        copy:$('#url').text()
+	});*/
+	
+		$("#btn-copy").zclip({
+        path:'ZeroClipboard.swf',
+        copy:$('#url').text(),
+        afterCopy:function(){
+            alert('after');
+        }
+		});
+	
+	/*$('#btn-copy').click(function(){
+		alert('hi');
+	});*/
+	
+});

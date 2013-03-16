@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130312061801) do
+ActiveRecord::Schema.define(:version => 20130316083640) do
 
   create_table "urls", :force => true do |t|
     t.text     "url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130312061801) do
     t.integer  "hits",       :default => 0
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.string   "visitor_ip"
   end
 
 end

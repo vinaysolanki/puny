@@ -17,7 +17,7 @@ class MainController < ApplicationController
 	
 	# Print shortened URL
 	if params[:new_url1].blank?
-		@new_url1 = "Enter a URL"
+		@new_url1 = ""
 	else
 		@new_url1 = "pun.ee/" + params[:new_url1]
     end
@@ -29,6 +29,9 @@ class MainController < ApplicationController
     # Fetch Url
     url_input = params['url']
     
+	# Fetch Ip
+	visitor_ip = request.remote_ip
+	
     # Generate a key
     key = generate_key
     
@@ -37,7 +40,7 @@ class MainController < ApplicationController
       key = generate_key
     end
     
-    @new_url = Url.new(:url => url_input, :key => key)
+    @new_url = Url.new(:url => url_input, :key => key, :visitor_ip => visitor_ip)
     @new_url.save
     redirect_to root_url(:new_url1 => key)
     
