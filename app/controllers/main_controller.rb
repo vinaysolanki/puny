@@ -16,11 +16,11 @@ class MainController < ApplicationController
 	end
 	
 	# Print shortened URL
-	if params[:new_url1].blank?
-		@new_url1 = ""
+	if params[:new_url].blank?
+		@new_url = ""
 		@status = 0
 	else
-		@new_url1 = "pn.ee/" + params[:new_url1]
+		@new_url = "pn.ee/" + params[:new_url]
 		@status = 1
     end
 	
@@ -43,9 +43,9 @@ class MainController < ApplicationController
       key = generate_key
     end
     
-    @new_url = Url.new(:url => url_input, :key => key, :visitor_ip => visitor_ip)
-    @new_url.save
-    redirect_to root_url(:new_url1 => key)
+    @new_url_record = Url.new(:url => url_input, :key => key, :visitor_ip => visitor_ip)
+    @new_url_record.save
+    redirect_to root_url(:new_url => key)
     
   end
   
