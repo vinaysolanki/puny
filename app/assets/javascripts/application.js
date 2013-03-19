@@ -30,4 +30,9 @@ $(document).ready(function(){
 		$('.copy-msg').animate({'opacity': 0},3000);
 	});
 	
+	if (status == 1){
+		
+		$('#shorten-status').delay(500).slideDown(900);
+	}
+	
 });

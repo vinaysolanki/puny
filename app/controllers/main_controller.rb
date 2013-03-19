@@ -18,9 +18,12 @@ class MainController < ApplicationController
 	# Print shortened URL
 	if params[:new_url1].blank?
 		@new_url1 = ""
+		@status = 0
 	else
 		@new_url1 = "pn.ee/" + params[:new_url1]
+		@status = 1
     end
+	
 	
   end
   
