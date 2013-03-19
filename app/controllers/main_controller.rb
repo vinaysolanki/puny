@@ -19,7 +19,7 @@ class MainController < ApplicationController
 	if params[:new_url1].blank?
 		@new_url1 = ""
 	else
-		@new_url1 = "pun.ee/" + params[:new_url1]
+		@new_url1 = "pn.ee/" + params[:new_url1]
     end
 	
   end
