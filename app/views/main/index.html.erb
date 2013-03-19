@@ -1,11 +1,11 @@
-
+	<div id="site-container">
 		<div class="site-title">
-			<h1>Puny<sup><span class="beta">beta</span><sup></h1>
-			<p>1-Click URL Shortener</p>
+			<div id="puny">Puny<sup><span class="beta">beta</span><sup></div>
+			<div class="title-msg">1-Click URL Shortener</div>
 		</div>
 		
 		<div class="main-content">
-			<div class="input-append">
+			<div class="input-append" id="url-box">
 				<%= form_tag( :action => "shorten", :method => "get") do %>
 				  <%= text_field_tag(:url,@new_url1, :class => "span6 main-input",:placeholder => 'Enter a URL') %>
 				  <button id="btn-copy" class="btn" type="button">Copy	</button>
@@ -22,4 +22,4 @@
 			</div>
 		</div>
 		<p><%= @url_id_n %></p>
-		
+	</div>

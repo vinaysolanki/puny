@@ -11,62 +11,85 @@
  *= require_self
  *= require_tree .
  */
+
+@media all and (max-width: 1366px){
+
+	.site-title{
+		padding-top:150px;	
+	}
+
+}
+
+@media all and (min-width: 1367px) and (max-width: 1920px){
+
+	.site-title{
+		padding-top:300px;
+	}
+
+}
+
  
- html {
+ body {
 width:100%;
 height:100%;
 background-image: -webkit-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
 }
 
-.site-title{
-	position: absolute;
-	width: 530px;
-	height: 120px;
-	margin: 10% 30%;
+#site-container{
+	position:relative;
+	width:800px;
+	height:640px;
+	margin: 0 auto;
 }
 
-.site-title h1{
+.site-title{
+	width: 530px;
+	height: 120px;
+	margin: 0 auto;
+	//padding-top: 25%;
+}
+
+#puny{
 	color: #66C7FF;
-	padding:10px;
 	font-size: 90px;
-	width: 220px;
-	height: 100px;
-	margin: 2% auto;
+	text-align:center;
 	text-shadow: 5px 0px 5px rgb(187, 216, 168);
 }
 
-.site-title p{
-	position: relative;
-	top: -40px;
-	left: 181px;
+.title-msg{
+	text-align: center;
+	margin-top: 50px;
 	color: rgb(236, 106, 179);
 	text-shadow: 0px 2px 2px rgb(192, 184, 184);
 }
 .main-content{
-	position:absolute;
-	width:560px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#url-box{
 	display:block;
-	margin:20% 28%;
+	width:554px;
+	margin: 0 auto;
 }
 
 .main-btn{
 	width:120px;
 	height:30px;
-	margin: 20px 40%;
+	margin: 0 auto;
 }
 
 .beta{
 	position: relative;
 	top: -20px;
 	font-size: 10px;
+	font-weight:bold;
 	color: rgb(204,58,58);
 }
 
 .puny-details{
-	
-	position:relative;
-	top: 40px;
-	left: 182px;
+	margin-top: 60px;
+	text-align: center;
 	line-height: 12px;
 	font-size: 14px;
 }
