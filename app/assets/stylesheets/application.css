@@ -15,7 +15,11 @@
 @media all and (max-width: 1366px){
 
 	.site-title{
-		padding-top:150px;	
+		padding-top:150px;
+	}
+	
+	#site-container{
+		min-height: 700px !important;
 	}
 
 }
@@ -23,48 +27,61 @@
 @media all and (min-width: 1367px) and (max-width: 1920px){
 
 	.site-title{
-		padding-top:300px;
+		padding-top:240px;
+	}
+	
+	#footer{
+		position:absolute !important;
 	}
 
 }
 
  
- body {
+ body,html {
 width:100%;
 height:100%;
-/* IE10 Consumer Preview */ 
-background-image: -ms-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
+margin:0;
+padding:0;
+}
 
-/* Mozilla Firefox */ 
-background-image: -moz-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
+#container{
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
 
-/* Opera */ 
-background-image: -o-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
 
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #F6FFA3), color-stop(1, #99EF43));
+	/* Opera */ 
+	background-image: -o-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
 
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #F6FFA3), color-stop(1, #99EF43));
 
-/* W3C Markup, IE10 Release Preview */ 
-background-image: radial-gradient(circle farthest-corner at center, #F6FFA3 0%, #99EF43 100%);
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-radial-gradient(center, circle farthest-corner, #F6FFA3 0%, #99EF43 100%);
 
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: radial-gradient(circle farthest-corner at center, #F6FFA3 0%, #99EF43 100%);
 
 }
 
 #site-container{
 	position:relative;
 	width:800px;
-	height:700px;
 	margin: 0 auto;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
 }
 
 .site-title{
 	width: 530px;
 	height: 120px;
 	margin: 0 auto;
-	//padding-top: 25%;
+
 }
 
 #puny{
@@ -219,5 +236,65 @@ background-image: radial-gradient(circle farthest-corner at center, #F6FFA3 0%, 
 	-webkit-animation-duration: 3s;
     -webkit-animation-delay: 0s;
     -webkit-animation-iteration-count: 1;
-	
 }
+
+#footer{
+	position:relative;
+	bottom:0;
+	width:100%;
+	height: 100px;
+	border: solid 1px grey;
+	margin: 0 auto;
+	background-color:rgba(20,20,20,0.4);
+
+}
+
+#footer-top{
+	height:80px;
+	width:810px;
+	margin:0 auto;
+}
+
+#about{
+	float:left;
+	width:200px;
+}
+
+#about a{
+	width:20px;
+	font-size: 14px;
+	color: rgb(25, 60, 112);
+	font-weight: bold;
+}
+
+#about-puny{
+	margin-left: 150px;
+	margin-top:20px;
+	width:30px;
+}
+
+#pledgie-widget{
+	margin:0 auto;
+	width:400px;
+	padding-top:20px;
+	text-align:center;
+}
+
+#pledgie{
+	width:122px;
+	margin:0 auto;
+}
+
+#follow-us{
+	float:right;
+	width:200px;
+	margin-top:-60px;
+}
+
+#copyright{
+	width:100px;
+	font-size:12px;
+	color:rgb(199, 216, 235);
+	margin-left:49%;
+}
+

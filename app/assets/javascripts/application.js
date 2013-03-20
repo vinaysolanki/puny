@@ -35,4 +35,6 @@ $(document).ready(function(){
 		$('#shorten-status').delay(500).slideDown(900);
 	}
 	
+	$("#myModal).modal('show');
+	
 });

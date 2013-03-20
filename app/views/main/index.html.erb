@@ -1,11 +1,11 @@
 <script>
  var status = <%= @status %>;
 </script>
-
+<div id="container">
 	<div id="site-container">
 		<div class="site-title">
 			<div id="puny">Puny<sup><span class="beta">beta</span></sup></div>
-			<div class="title-msg">1-Click URL Shortener</div>
+			<div class="title-msg">A Simple URL Shortener</div>
 		</div>
 		
 		<div class="main-content">
@@ -55,3 +55,59 @@
 		</div>
 		<p><%= @url_id_n %></p>
 	</div>
+	
+	<div id="footer">
+		<div id="footer-top">
+			<div id="about">
+			
+				<!-- Button to trigger modal -->
+				<div id="about-puny">
+					<a href="#myModal" role="button" data-toggle="modal">About</a>
+					<a href="mailto:vinay@pn.ee">Contact</a>
+				</div>
+				
+				<!-- Modal -->
+				<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 id="myModalLabel">About</h4>
+				  </div>
+				  <div class="modal-body">
+					<p>Hi! My name is <a href="http://twitter.com/vinaysolanki">Vinay Solanki</a>. I'm a Web Developer based in Vancouver, Canada. I created Puny as a personal project to brush up my Ruby on Rails skills. I'm primarily a PHP developer but I love Rails and I'm striving to learn as much about it as possible. Ruby itself is a fascinating language that I believe can make you quite productive if you know your way around its syntax.</p>
+					
+					<p>If you want to contact me, send me an email at: <strong>vinay@pn.ee</strong></p>
+					<p>And if you have any suggestions or feedback for Puny please don't hesitate to contact me either. Thanks!</p>
+				  </div>
+				  <div class="modal-footer">
+					
+				  </div>
+				</div>
+			
+			</div>
+			
+			<div id="pledgie-widget">
+				<p>Help us make Puny better. Please donate</p>
+				<div id="pledgie">
+					<a href='http://www.pledgie.com/campaigns/19593'><img alt='Click here to lend your support to: Help us make Puny better and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/19593.png?skin_name=chrome' border='0' /></a>
+				</div>
+			</div>
+			
+			<div id="follow-us">
+				<div id="puny-facebook">
+					<div class="fb-like" data-href="http://pn.ee" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+				</div>
+				
+				<div id="puny-tweet">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pn.ee" data-text="Check out this 'Puny' URL shortener" data-via="Puny_beta" data-hashtags="Puny">Tweet</a>
+				</div>
+			
+				<div id="puny-twitter">
+					<a href="https://twitter.com/Puny_beta" class="twitter-follow-button" data-show-count="false">Follow @Puny_beta</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="copyright">© Puny</div>
+		
+	</div>
+</div>
