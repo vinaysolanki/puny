@@ -16,16 +16,22 @@ class MainController < ApplicationController
 	end
 	
 	# Print shortened URL
-	if flash[:new_url].blank?
+	if flash[:new_url].blank? and flash[:status].blank?
 		@new_url = ""
 		@status = 0
+	
+	elsif flash[:new_url].blank? and flash[:status] == 2
+		@new_url = ""
+		@status = 2
+		@status_msg = "Failed: Please Enter a Valid URL"
 	else
 		@new_url = "pn.ee/" + flash[:new_url]
 		@status = 1
+		@status_msg = "Successful!"
     end
 	
-	
   end
+  
   
   def shorten
   
@@ -43,10 +49,17 @@ class MainController < ApplicationController
       key = generate_key
     end
     
-    @new_url_record = Url.new(:url => url_input, :key => key, :visitor_ip => visitor_ip)
-    @new_url_record.save
-	flash[:new_url] = key
-    redirect_to root_url
+	if url_validation(url_input) == true
+		@new_url_record = Url.new(:url => url_input, :key => key, :visitor_ip => visitor_ip)
+		@new_url_record.save
+		flash[:new_url] = key
+		flash[:status] = 1
+		redirect_to root_url
+	else
+		flash[:status] = 2
+		redirect_to root_url
+	end
+		
     
   end
   
@@ -76,4 +89,18 @@ class MainController < ApplicationController
     return key
     
   end
+  
+  def url_validation(url)
+  
+	uri = URI.parse(url)
+	begin
+	  resp = uri.kind_of?(URI::HTTP)
+    rescue URI::InvalidURIError
+      resp = false
+	end
+	
+	return resp
+	
+  end
+  
 end

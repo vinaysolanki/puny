@@ -33,6 +33,14 @@ $(document).ready(function(){
 	if (status == 1){
 		
 		$('#shorten-status').delay(500).slideDown(900);
+	} 
+	else if (status == 2){
+		$('#shorten-status').css('height',30);
+		$('#shorten-msg').css('color','red');
+		$('#share-box').hide();
+		$('#shorten-status').delay(200).slideDown(400);
+		
+		
 	}
 	
 	
