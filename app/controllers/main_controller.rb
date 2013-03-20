@@ -16,11 +16,11 @@ class MainController < ApplicationController
 	end
 	
 	# Print shortened URL
-	if params[:new_url].blank?
+	if flash[:new_url].blank?
 		@new_url = ""
 		@status = 0
 	else
-		@new_url = "pn.ee/" + params[:new_url]
+		@new_url = "pn.ee/" + flash[:new_url]
 		@status = 1
     end
 	
@@ -45,7 +45,8 @@ class MainController < ApplicationController
     
     @new_url_record = Url.new(:url => url_input, :key => key, :visitor_ip => visitor_ip)
     @new_url_record.save
-    redirect_to root_url(:new_url => key)
+	flash[:new_url] = key
+    redirect_to root_url
     
   end
   
