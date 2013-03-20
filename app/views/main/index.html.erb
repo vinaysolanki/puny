@@ -36,7 +36,8 @@
 						<!-- Google share button -->
 						<div id="google-btn">
 							<!-- Place this tag where you want the share button to render. -->
-							<div class="g-plus" data-action="share" data-annotation="none" href="http://www.<%= @new_url %>"></div>
+							<link rel="canonical" href="<%= @new_url %>">
+							<div class="g-plus" data-action="share" data-annotation="none"></div>
 							
 							<!-- Place this tag after the last share tag. -->
 							<script type="text/javascript">
