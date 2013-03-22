@@ -92,9 +92,9 @@ class MainController < ApplicationController
   
   def url_validation(url)
   
-	uri = URI.parse(url)
+	uri = URI.parse(URI.encode(url.strip))
 	begin
-	  resp = uri.kind_of?(URI::HTTP)
+	  resp = uri.kind_of?(URI::HTTP) || uri.kind_of?(URI::HTTPS)
     rescue URI::InvalidURIError
       resp = false
 	end
